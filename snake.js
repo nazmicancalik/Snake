@@ -18,6 +18,19 @@ class Snake {
     this.tail[this.total - 1] = createVector(this.x, this.y);
     this.x += this.vx;
     this.y += this.vy;
+    
+    //Corner Checks
+    if (this.x === width && this.vx > 0){
+    	this.x = 0
+    }else if(this.x === -scl && this.vx < 0){
+    	this.x = width
+    }
+
+    if (this.y === height && this.vy > 0){
+    	this.y = 0
+    }else if(this.y === -scl && this.vy < 0){
+    	this.y = height
+    }
   }
 
   death() {

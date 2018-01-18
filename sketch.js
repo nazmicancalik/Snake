@@ -26,10 +26,10 @@ function draw() {
   snake.update();
   snake.show();
   if (orange.score === 100) {
-    fill(0);
+    fill(255);
     textSize(32);
     textAlign(CENTER);
-    text("C'mon its big score!", width / 2, 80);
+    text("Big Score", width / 2, 80);
   }
   orange.show();
   textSize(13);
